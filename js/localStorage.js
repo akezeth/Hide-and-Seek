@@ -19,9 +19,9 @@ function loadLocalStorage() {
   }
 }
 formInputsArr.forEach((formInput) => {
-  formInput.addEventListener('keyup', (e) => {
-    const input = e.target.attributes.name.value;
-    formStorage[input] = e.target.value;
+  formInput.addEventListener('keyup', () => {
+    const input = event.target.attributes.name.value;
+    formStorage[in] = event.target.value;
     const formStorageStr = JSON.stringify(formStorage);
     localStorage.setItem('formData', formStorageStr);
   });
