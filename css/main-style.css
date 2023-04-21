@@ -1,0 +1,352 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: #1c1a19;
+}
+
+/* section {
+  min-height: 100vh;
+} */
+
+ul {
+  list-style-type: none;
+}
+
+/* header section style */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #3c3a39;
+  display: flex;
+  padding: 1rem 2rem;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+}
+
+header .logo {
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+#menuIcon {
+  color: #fff;
+  font-size: 1.75rem;
+  font-weight: 700;
+  display: none;
+}
+
+.navbar a {
+  color: #fff;
+  font-size: 1.25rem;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  padding-left: 3rem;
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+  color: #ff6b00;
+}
+
+/* header section adjustments for desktop version */
+@media (max-width: 768px) {
+  #menuIcon {
+    display: block;
+  }
+
+  .navbar {
+    position: absolute;
+    min-height: 100vh;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 0 1.5rem;
+    background-color: #3c3a39;
+    display: none;
+  }
+
+  .navbar.active {
+    display: block;
+  }
+
+  .logo.active {
+    visibility: hidden;
+  }
+
+  .navbar a {
+    display: block;
+    padding: 2rem;
+    font-size: 2rem;
+    border-bottom: 1px solid #6f6c6b;
+  }
+
+  .navbar a:last-child {
+    display: none;
+    border: none;
+  }
+}
+
+.headline {
+  width: 100%;
+  display: grid;
+  grid-template-columns: calc(90% - 2rem);
+  padding: 6.25rem 1rem;
+  position: relative;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  color: #ff6b00;
+  font-family: 'Crete Round', Georgia, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 3.5rem;
+  line-height: 4rem;
+}
+
+.job-title {
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.5rem;
+  padding-top: 0.75rem;
+}
+
+.info {
+  color: #fff;
+  font-family: 'Poppins', 'Trebuchet MS', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  padding-top: 0.75rem;
+}
+
+.socialmedia ul {
+  width: 12.5rem;
+  display: flex;
+  margin-top: 30px;
+  justify-content: space-around;
+}
+
+.desktop-background-img {
+  display: none;
+}
+
+.mobile-background-img {
+  width: 8.125rem;
+  height: 19.5rem;
+
+  /* background-repeat: no-repeat; */
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+/* headline section adjustments for desktop version */
+@media (min-width: 768px) {
+  .headline {
+    display: grid;
+    grid-template-columns: 4rem 35rem;
+  }
+
+  .socialmedia {
+    order: -1;
+    margin-top: 1rem;
+  }
+
+  .info {
+    padding-bottom: 3.75rem;
+  }
+
+  .socialmedia ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .mobile-background-img {
+    display: none;
+  }
+
+  .desktop-background-img {
+    display: block;
+    width: 31rem;
+    position: absolute;
+    bottom: -5rem;
+    right: 0;
+  }
+}
+
+/* About me section */
+.aboutMe {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 7.5rem 1.5rem;
+  position: relative;
+  margin: 0 auto;
+}
+
+.aboutMeTitle {
+  color: #ff6b00;
+  font-family: 'Crete Round', Georgia, Times, 'Times New Roman', serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 4.5rem;
+  line-height: 5.5rem;
+  letter-spacing: 0.03rem;
+}
+
+.aboutMeDescription {
+  width: 20.5rem;
+  color: #fff;
+  font-family: 'Inter', 'Trebuchet MS', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  padding-top: 0.75rem;
+}
+
+.resumeLinkContainer {
+  padding-top: 2.25rem;
+}
+
+.resumeLink {
+  width: 9.75rem;
+  background-color: #ff6b00;
+  border: none;
+  color: #1c1a19;
+  padding: 0.8rem;
+  text-align: center;
+  display: inline-block;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* link button styles */
+.resumeLink:focus {
+  background-color: #e05304;
+}
+
+.resumeLink:hover {
+  background-color: #1c1a19;
+  border: 2px solid #ff6b00;
+  color: #ff6b00;
+  transition: 0.5s;
+}
+
+.resumeLink:disabled {
+  background-color: #f4f1f0;
+  border: none;
+  color: #5b5957;
+}
+
+.background-img2 {
+  background-image: url('../images/aboutMe backgroundMob.png');
+  background-size: contain;
+  width: 10rem;
+  height: 16.25rem;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 23.1rem;
+  right: 0;
+}
+
+@media (min-width: 768px) {
+  .aboutMe {
+    padding-left: 8.75rem;
+    padding-right: 8.75rem;
+  }
+
+  .aboutMeDescription {
+    width: 45rem;
+    font-size: 1.25rem;
+  }
+
+  .background-img2 {
+    background-image: url('../images/aboutMebackgroundDesk.png');
+    background-size: contain;
+    width: 26rem;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 8rem;
+    right: 0;
+  }
+}
+
+.line2 {
+  padding-top: 12.5rem;
+}
+
+.experience {
+  color: #fff;
+  text-align: center;
+  padding-top: 5rem;
+}
+
+.experience h3 {
+  font-family: 'InaiMathi', 'Gill Sans', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 2.75rem;
+}
+
+.experience ul {
+  font-family: 'InaiMathi', 'Gill Sans', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.3rem;
+  line-height: 2.6rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .experience {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.footer {
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top: 1px solid  #dfe1e6;
+  padding: 1.5rem 0;
+}
+
+.socialmedia2 {
+  width: 12.5rem;
+  display: flex;
+  justify-content: space-around;
+  padding: 0.63rem;
+  margin-top: 1rem;
+}
